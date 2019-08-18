@@ -1,6 +1,6 @@
 {
   "name": "appflow",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fluent application flow and state management",
   "main": "src/appflow.js",
   "types": "src/appflow.d.ts",
