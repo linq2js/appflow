@@ -4,7 +4,7 @@ const asyncResultTypes = {
 };
 
 const defaultReducer = ({ state }) => state;
-const defaultToggler = ({ state }) => !state;
+const defaultToggle = ({ state }) => !state;
 const strictComparer = (a, b) => a === b;
 
 const rootId = "@root";
@@ -408,7 +408,7 @@ class Flow {
 
   toggleState = (...props) => {
     if (!props.length) {
-      return this.state(defaultToggler);
+      return this.state(defaultToggle);
     }
     return this.state(({ state }) => {
       return props.reduce(
@@ -926,6 +926,10 @@ export function arrayEqual(a, b) {
   if (!a || b) return false;
   if (!b || a) return false;
   return a.length === b.length && a.every((i, index) => i === b[index]);
+}
+
+export function extend(...prototypes) {
+  Object.assign(State.prototype, prototypes);
 }
 
 export function clone(value) {
