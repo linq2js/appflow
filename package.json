@@ -1,0 +1,92 @@
+{
+  "name": "appflow",
+  "version": "0.0.1",
+  "description": "Fluent application flow and state management",
+  "main": "src/appflow.js",
+  "types": "src/appflow.d.ts",
+  "scripts": {
+    "test": "jest",
+    "$publish": "npm publish"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "flow",
+    "flow management",
+    "flow manager",
+    "state management",
+    "state manager",
+    "state",
+    "manager",
+    "store",
+    "flux"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linq2js/appflow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linq2js/appflow/issues"
+  },
+  "homepage": "https://github.com/linq2js/appflow#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ],
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./src"
+          ]
+        }
+      ]
+    ]
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.4.5",
+    "@testing-library/react": "^8.0.4",
+    "@testing-library/react-hooks": "^1.1.0",
+    "@types/react": "^16.8.23",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "jest": "^24.8.0",
+    "jest-dom": "^3.5.0",
+    "node-fetch": "^2.6.0",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
+    "react-testing-library": "^8.0.1"
+  }
+}
